@@ -1,0 +1,104 @@
+body{
+    background-image: url(kepek/v3.jpg);
+    margin: auto;
+    max-width: 1100px;
+    color: #456280;
+}
+aside img{
+    width: 90%;
+    border: 5px solid#456280;
+}
+main{
+    background-color: #cfc6b5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "h h"
+    "n n"
+    "s a"
+    "f f";
+}
+header{
+    background-color: #506a85;
+    grid-area: h;
+    padding: 20px;
+}
+nav{
+    grid-area: n;
+}
+aside{
+    grid-area: s;
+}
+article{
+    grid-area: a;
+    text-align: center;
+    padding: 25px;
+}
+nav a:hover{
+    background-color: #456280;
+    color: white;
+}
+footer{
+    grid-area: f;
+    background-color: #506a85;
+    color: #dad5ca;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color:#456280;
+}
+aside ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style-type: none;
+}
+aside li{
+    padding: 10px;
+}
+tr:nth-child(odd) {
+    background-color: #f3efe9;
+  }
+table, th, td{
+    border: 1px solid #506a85;
+    border-collapse: collapse;
+}
+th{
+    background-color: #506a85;
+    color: white;
+    padding: 10px;
+}
+td{
+    padding: 10px;
+}
+
+@media only screen and (max-width: 800px){
+    main{
+        background-color: #cfc6b5;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "h"
+        "n"
+        "a"
+        "s"
+        "f";
+    }
+    body{
+        max-width: 80%;
+    }
+    table{
+        margin-left: 60px;
+    }
+    nav a:hover{
+        background-color: #456280;
+        color: white;
+    }
+}
